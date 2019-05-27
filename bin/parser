@@ -1,2 +1,11 @@
 <?php
 
+include __DIR__ . '/../src/Class/Parser.php';
+
+use Parser\Parser;
+
+$parser = new Parser();
+
+$content = $parser->parse("https://devdocs.magento.com/guides/v2.0/#/individual-contributors");
+
+print_r($content);
